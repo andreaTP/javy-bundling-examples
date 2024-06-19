@@ -1,0 +1,13 @@
+{
+    "scripts": {
+        "build": "parcel build --no-source-maps example.js && javy compile dist/example.js -o dist/out.wasm",
+        "demo": "node test.js"
+    },
+    "dependencies": {
+        "random-words": "^2.0.1"
+    },
+    "devDependencies": {
+        "javy-cli": "^0.2.0",
+        "parcel": "^2.12.0"
+    }
+}

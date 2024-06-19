@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+
+jobs:
+  ci:
+    name: CI
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        bundler:
+          - esbuild
+          - parcel
+          - webpack
+    steps:
+      - name: Checkout sources
+        uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: Build and run
+        working-directory: ${{ matrix.bundler }}
+        run: |
+          npm ci
+          npm run build
+          npm run demo

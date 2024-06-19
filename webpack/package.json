@@ -1,0 +1,14 @@
+{
+    "scripts": {
+        "build": "webpack bundle && javy compile dist/out.js -o dist/out.wasm",
+        "demo": "node test.js"
+    },
+    "dependencies": {
+        "random-words": "^2.0.1"
+    },
+    "devDependencies": {
+        "javy-cli": "^0.2.0",
+        "webpack": "^5.92.1",
+        "webpack-cli": "^5.1.4"
+    }
+}

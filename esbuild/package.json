@@ -1,0 +1,13 @@
+{
+    "scripts": {
+        "build": "esbuild example.js --bundle --outfile=dist/out.js && javy compile dist/out.js -o dist/out.wasm",
+        "demo": "node test.js"
+    },
+    "dependencies": {
+        "random-words": "^2.0.1"
+    },
+    "devDependencies": {
+        "esbuild": "0.21.5",
+        "javy-cli": "^0.2.0"
+    }
+}
